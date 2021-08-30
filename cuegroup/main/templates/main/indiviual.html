@@ -1,0 +1,56 @@
+{% extends 'userlayout.html' %}
+{% load static %}
+{% block title %} إنشاء حساب {% endblock title %}
+
+
+{% block body %}
+     <div class="m position-relative" style="background-image: url('../../../static/images/curved-images/curved14.jpg') ; background-size: cover;">
+    <main class="main-content border-radius-sm">
+      <div class="section min-vh-100 position-relative transform-scale-0 transform-scale-md-0 m-auto m-0">
+        <div class="container">
+          <div class="row pt-lg-5 pb-lg-5" style="margin: 0 auto;">
+<div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+              <div class="card card-plain mt-8">
+                <div class="card-header pb-0 text-center bg-gradient-dark">
+                  <h3 class="font-weight-bolder text-white" style="color: white">حساب أفراد</h3>
+                </div>
+                <div class="card-body">
+                  <form method="post" role="form">
+                      {% csrf_token %}
+                    <label for="email">البريد الألكترونى</label>
+                    <div class="mb-3">
+                      <input type="email" name="email" id="email" class="form-control" placeholder="البريد الألكترونى" aria-label="Email" aria-describedby="email-addon">
+                    </div>
+                    <label for="first_name">الأسم الأول</label>
+                    <div class="mb-3">
+                      <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                       <label for="last_name">اللقب</label>
+                    <div class="mb-3">
+                      <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                           <label for="phone">الهاتف</label>
+                    <div class="mb-3">
+                      <input type="number" name="phone" id="phone" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+
+                                      <label for="last_name">تاريخ الميلاد</label>
+                    <div class="mb-3">
+                      <input type="date" name="dob" id="dob" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                    </div>
+                                                         <label for="country">البلد</label>
+                      {% include 'countriesForm.html' %}
+
+                    <div class="text-center">
+                      <button type="button" class="btn bg-maal text-white w-100 mt-4 mb-0">تسجيل</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>          </div>
+        </div>
+      </div>
+    </main>
+     </div>
+
+{% endblock body %}
