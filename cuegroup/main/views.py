@@ -18,6 +18,14 @@ def home_page(request):
     return render(request, 'main/home.html')
 
 
+def about_page(request):
+    return render(request, 'main/about.html')
+
+
+def ethics(request):
+    return render(request, 'main/ethics.html')
+
+
 def all_individual(request):
     all = IndiviualRequest.objects.all()
     return render(request, 'main/all_individual.html', context={"all": all})

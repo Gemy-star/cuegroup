@@ -21,8 +21,20 @@
 
                                                                                     <li class="nav-item">
                                     <a class="nav-link me-2" href="{% url 'home-page' %}">
-                                        <i class="fas fa-key opacity-6 text-dark me-1" aria-hidden="true"></i>
+                                        <i class="fas fa-home opacity-6 text-dark me-1" aria-hidden="true"></i>
                                         الرئيسية
+                                    </a>
+                                </li>
+                                                                                 <li class="nav-item">
+                                    <a class="nav-link me-2" href="{% url 'about' %}">
+                                        <i class="far fa-building opacity-6 text-dark me-1" aria-hidden="true"></i>
+                                       عن الشركة
+                                    </a>
+                                </li>
+                                             <li class="nav-item">
+                                    <a class="nav-link me-2" href="{% url 'ethics' %}">
+                                        <i class="fas fa-user-tag opacity-6 text-dark me-1" aria-hidden="true"></i>
+                                       الشروط و الأحكام
                                     </a>
                                 </li>
                                 {% if request.user.first_name %}
@@ -32,11 +44,16 @@
                                         تسجيل خروج
                                     </a>
                                 </li>
+                                                                                           <li class="nav-item">
+                                    <a class="nav-link me-2" href="{% url 'dashboard' %}">
+                                        <i class="far fa-address-card opacity-6 text-dark me-1" aria-hidden="true"></i>
+لوحة التحكم                                    </a>
+                                </li>
                                 {% endif %}
 
                                                                                                                     <li class="nav-item">
                                     <a class="nav-link me-2" href="{% url 'add-individual' %}">
-                                        <i class="fas fa-person opacity-6 text-dark me-1" aria-hidden="true"></i>
+                                        <i class="fas fa-user opacity-6 text-dark me-1" aria-hidden="true"></i>
                                         حساب أفراد
                                     </a>
                                 </li>
