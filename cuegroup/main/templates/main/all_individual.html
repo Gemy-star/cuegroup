@@ -1,0 +1,97 @@
+{% extends 'userlayout.html' %}
+{% load static %}
+
+{% block title %} طلبات الأفراد  {% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+      <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../../../static/images/curved-images/curved14.jpg'); background-position-y: 50%;">
+        <span class="mask opacity-6"></span>
+      </div>
+
+    </div>
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <div class="card-header pb-0 p-3">
+              <div class="row">
+                <div class="col-md-8 d-flex align-items-center">
+                  <h6 class="mb-0">طلبات الأفراد</h6>
+                </div>
+                <div class="col-md-4 text-end">
+                  <a href="javascript:;">
+                    <i class="fas fa-user text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="" aria-hidden="true" data-bs-original-title="Edit Profile" aria-label="Edit Profile"></i><span class="sr-only">Edit Profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">إسم الأول</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> اللقب</th>
+                                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> الهاتف</th>
+                                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> البريد الألكترونى</th>
+                                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> البلد</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                             {% for item in all %}
+                              <tr>
+                                        <td>
+                                            <div class="d-flex">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ item.first_name }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                                       <td>
+                                            <div class="d-flex">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ item.last_name }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                                <td>
+                                            <div class="d-flex">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ item.phone }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                                <td>
+                                            <div class="d-flex">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ item.email }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                                <td>
+                                            <div class="d-flex">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{ item.country }}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                               {% endfor %}
+
+                            </tbody>
+                        </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock body %}
